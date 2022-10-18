@@ -1,0 +1,32 @@
+{% extends "base" %}
+
+{% block content %}
+    <h2>@Home</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <h3><div class="column-title">Data fetch from sample SQLite-3 DB</div></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>Categories</td>
+                <td>
+                    <a href="/categories">/categories</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Products</td>
+                <td>
+                    <a href="/products">/products</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Customers</td>
+                <td>
+                    <a href="/customers">/customers</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock content %}

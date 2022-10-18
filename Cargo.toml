@@ -1,0 +1,19 @@
+[package]
+name = "rocketapp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.11"
+rusqlite = {version = "0.28.0", features= ["bundled"]}
+serde = { version ="1.0.143", features = ["derive"] }
+serde_json = "1.0.83"
+rocket_cors = { version = "0.5.2", default-features = false }
+
+
+[dependencies.rocket_contrib]
+version = "0.4.11"
+default-features = false
+features = ["json", "tera_templates"]

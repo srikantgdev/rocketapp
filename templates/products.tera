@@ -1,0 +1,29 @@
+{% extends 'base' %}
+
+{% block content %}
+    <h2>Products</h2>
+    <div class="list">
+        <table>
+            <thead>
+                <tr>
+                    <td>Product Name</td>
+                    <td>Quantity Per Unit</td>
+                    <td>Category</td>
+                    <td align="right">Unit Price</td>
+                    <td align="right">Reorder Level</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in data %}
+                    <tr>
+                        <td>{{p.product_name}}</td>
+                        <td>{{p.qty_per_unit}}</td>
+                        <td>{{p.category}}</td>
+                        <td align="right">{{p.unit_price}}</td>
+                        <td align="right">{{p.reorder_level}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

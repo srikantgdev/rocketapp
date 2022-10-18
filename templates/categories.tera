@@ -1,0 +1,23 @@
+{% extends 'base' %}
+
+{% block content %}
+    <h3>Categories</h3>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Category Name</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cat in data %}
+                    <tr>
+                    <td>{{cat.category_name}}</td>
+                    <td>{{cat.description}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

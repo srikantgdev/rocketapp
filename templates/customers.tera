@@ -1,0 +1,31 @@
+{% extends 'base' %}
+
+{% block content %}
+    <h2>Customers</h2>
+    <div class="list">
+        <table>
+            <thead>
+                <tr>
+                    <td>Company ID</td>
+                    <td>Company Name</td>
+                    <td>Contact Name</td>
+                    <td>Contact Title</td>
+                    <td>City</td>
+                    <td>Country</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in data %}
+                    <tr>
+                        <td>{{c.customer_id}}</td>
+                        <td>{{c.company_name}}</td>
+                        <td>{{c.contact_name}}</td>
+                        <td>{{c.contact_title}}</td>
+                        <td>{{c.city}}</td>
+                        <td>{{c.country}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

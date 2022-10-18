@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sample APP using Rocket Templates</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Helvetica;
+            box-sizing: border-box;
+            font-weight: 400;
+        }
+        html {
+            background: linear-gradient(#999,#333) no-repeat;
+            min-height: 100vh;
+        }
+        .apptitle {
+            font-family: cursive;
+            font-size: 3em;
+        }
+        body {
+            padding: 0.5vh 1vw;
+            margin: 1vh 18vw;
+            background-color: whitesmoke;
+            height: 98vh;
+        }
+        nav {
+
+            padding: 0.5em 1em;
+            background: linear-gradient(aliceblue,lightblue);
+            margin: 0 0 1em;
+        }
+        nav > a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            color: blue;
+        }
+        .content {
+            padding: 0 1em;
+            height: 85%;
+        }
+        .routes-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1em;
+        }
+        thead > tr:first-child {
+            background-color: #666;
+            color: whitesmoke;
+        }
+        td, th {
+            padding: 0.25em 0.5em;
+        }
+        .column-title {
+            background-color: #ccc;
+            padding: 0.25em 0.5em;
+        }
+        .list {
+            height: 72vh;
+            overflow-y: auto;
+            box-shadow: 0 0 4px #999;
+        }
+        footer {
+            margin-top: 1em;
+            font-size: smaller;
+            color: teal;
+        }
+        footer:before {
+            content: "\00bb";
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="apptitle">
+            Rust-Rocket framework template Demo
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/categories">Categories</a>
+            <a href="/products">Products</a>
+            <a href="/customers">Customers</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+        <footer>
+          <small>Developed by <i>Srikant Gudi | Bengaluru, India</i></small>
+        </footer>
+    </div>
+
+  </body>
+</html>
