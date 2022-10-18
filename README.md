@@ -2,6 +2,8 @@
  
 ## Rust-Rocket framework template Demo
 
+##### dependencies are defined in `Cargo.toml`
+
 ### Clone as:
 ```
  git clone https://github.com/srikantgdev/rocketapp [optional-app-name]
